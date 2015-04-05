@@ -56,7 +56,7 @@ ROOT_URLCONF = 'coffeedapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(MAIN_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -92,6 +92,11 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
@@ -115,6 +120,8 @@ TEMPLATE_DIRS = (
     os.path.join(MAIN_DIR, 'templates'),
     )
 
-STATIC_DIRS = (
-    os.path.join(MAIN_DIR, 'stati,')
+STATICFILES_DIRS = (
+    os.path.join(MAIN_DIR, 'static'),
     )
+
+STATIC_ROOT = 'staticfiles'
