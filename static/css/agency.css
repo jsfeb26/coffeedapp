@@ -4,7 +4,6 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -233,9 +232,10 @@ fieldset[disabled] .btn-xl.active {
 
 @media(min-width:768px) {
     .navbar-default {
-        padding: 25px 0;
+        /*padding: 25px 0;*/
+        padding: 10px 0; /* Change for Project 3 Video 8 */
         border: 0;
-        background-color: transparent;
+        background-color: #222;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
@@ -1013,6 +1013,10 @@ section#contact {
 
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0px;
+}
+
+.main-content {
+    padding-top: 90px;
 }
 
 .data-layer{
